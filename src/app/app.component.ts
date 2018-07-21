@@ -12,8 +12,7 @@ import { Component } from '@angular/core';
       </button>
      <input
      type = "text"
-     [value] = "name"
-     (blur) ="handleBlur($event)"
+      [ngModel]="name"
      (input) = "handleInput($event)">
     </div>
     <div>{{name}}</div>
