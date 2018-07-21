@@ -7,11 +7,11 @@ import { Component } from '@angular/core';
     selector: 'app-root',
     template: `
     <div class = 'app'>
-      <button (click)="handleClick()" >
-      Change Name
+      <button (click)="handleClick(username.value)" >
+     Get value
       </button>
       <input
-        type = "text"
+        type = "text" #username
        >
 
     <div>{{name}}</div>
@@ -25,8 +25,8 @@ export class AppComponent {
 
  name = 'Todd';
 
-  handleClick() {
-    this.name = 'Motto';
+  handleClick(value: string) {
+    console.log(value);
 
   }
 
