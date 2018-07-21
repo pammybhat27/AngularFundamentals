@@ -8,7 +8,11 @@ import { Component } from '@angular/core';
     template: `
     <div class = 'app'>
       <div>
-      {{ title + "!" }}
+        <h1>{{ title + "!" }}</h1>
+        <h1 [innerHTML] = "title"></h1>
+        <img [src] = "logo">
+        <input type = "text" [value] = "name">
+        <div>{{name}}</div>
       </div>
       <div>
       {{numberOne + numberTwo}}
@@ -28,8 +32,9 @@ export class AppComponent {
   isHappy = true;
   numberOne = 1;
   numberTwo = 2;
+ logo = 'src/img/logo.svg';
 
-
+ name = 'Todd';
 
 
 
