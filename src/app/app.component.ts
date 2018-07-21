@@ -10,13 +10,8 @@ import { Component } from '@angular/core';
       <button (click)="handleClick()" >
       Change Name
       </button>
-     <input
-     type = "text"
-      [ngModel]="name"
-     (ngModelChange) = "handleChange($event)">
       <input
         type = "text"
-        [(ngModel)]= "name"
        >
 
     <div>{{name}}</div>
@@ -34,24 +29,5 @@ export class AppComponent {
     this.name = 'Motto';
 
   }
-  handleChange(value: string) {
-    this.name = value;
-
-
-  }
-
-
-
-
-
-
-
-
-
-  constructor() {
-
-
-  }
-
 
 }
