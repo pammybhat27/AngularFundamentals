@@ -7,35 +7,38 @@ import { Component } from '@angular/core';
     selector: 'app-root',
     template: `
     <div class = 'app'>
-      <div>
-        <h1>{{ title + "!" }}</h1>
-        <h1 [innerHTML] = "title"></h1>
-        <img [src] = "logo">
-        <input type = "text" [value] = "name">
-        <div>{{name}}</div>
-      </div>
-      <div>
-      {{numberOne + numberTwo}}
-
+      <button (click)="handleClick()" >
+      Change Name
+      </button>
+     <input
+     type = "text"
+     [value] = "name"
+     (blur) ="handleBlur($event)"
+     (input) = "handleInput($event)">
     </div>
-      <div>
-        {{isHappy ? ':)':':('}}
-      </div>
-    </div>
-
+    <div>{{name}}</div>
     `,
     styleUrls: ['app.component.css']
   }
 )
 export class AppComponent {
-  title: string;
-  isHappy = true;
-  numberOne = 1;
-  numberTwo = 2;
- logo = 'src/img/logo.svg';
+
 
  name = 'Todd';
+  handleBlur(event: any) {
+    this.name = event.target.value;
+console.log(event);
 
+  }
+  handleClick() {
+    this.name = 'Motto';
+
+  }
+  handleInput(event: any) {
+    this.name = event.target.value;
+
+
+  }
 
 
 
@@ -46,7 +49,7 @@ export class AppComponent {
 
 
   constructor() {
-    this.title = 'Ultimate Angular';
+
 
   }
 
