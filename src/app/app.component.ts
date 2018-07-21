@@ -10,7 +10,8 @@ import { Component } from '@angular/core';
       {{ title }}
     </div>
 
-    `
+    `,
+    styleUrls: ['app.component.css']
   }
 )
 export class AppComponent {
