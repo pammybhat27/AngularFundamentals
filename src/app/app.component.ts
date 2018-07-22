@@ -1,13 +1,18 @@
 import { Component } from '@angular/core';
 
+interface  Passenger {
+id: number;
+  fullName: string;
+  checkedIn: boolean;
 
+}
 
 @Component(
   {
     selector: 'app-root',
     template: `
     <div class = 'app'>
-      <>
+      <h3> Airline Passengers</h3>
 
 
     </div>
@@ -18,12 +23,25 @@ import { Component } from '@angular/core';
 )
 export class AppComponent {
 
+  passengers: Passenger[] = [{
+  id: 1,
+  fullName: 'Stephen',
+    checkedIn: true
+  },
+    {
+      id: 2,
+      fullName: 'Rose',
+      checkedIn: false
 
- name = 'Todd';
+    },
+    {
+      id: 3,
+      fullName: 'Testing',
+      checkedIn: false
 
-  handleChange(value: string) {
-    this.name = value;
+    }
+  ];
 
-  }
+
 
 }
