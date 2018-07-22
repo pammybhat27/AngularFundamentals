@@ -13,7 +13,11 @@ id: number;
     template: `
     <div class = 'app'>
       <h3> Airline Passengers</h3>
-
+      <ul>
+        <li *ngFor="let passenger of passengers">
+          {{passenger.fullName}}
+        </li>
+      </ul>
 
     </div>
     `,
