@@ -42,7 +42,7 @@ id: number;
           <p>{{passenger | json}}</p>
           <div class = "date">
           Check in Date:
-            {{passenger.checkInDate? (passenger.checkInDate | date : 'yMMMMd') :'Not checked in'}}
+            {{passenger.checkInDate? (passenger.checkInDate | date | uppercase : 'yMMMMd') :'Not checked in'}}
           </div>
         </li>
 
