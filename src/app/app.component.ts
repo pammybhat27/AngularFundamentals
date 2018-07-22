@@ -14,8 +14,8 @@ id: number;
     <div class = 'app'>
       <h3> Airline Passengers</h3>
       <ul>
-        <li *ngFor="let passenger of passengers">
-          {{passenger.fullName}}
+        <li *ngFor="let passenger of passengers; let i = index">
+         {{ i }} : {{passenger.fullName}}
         </li>
       </ul>
 
