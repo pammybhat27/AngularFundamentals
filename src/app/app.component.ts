@@ -4,6 +4,7 @@ interface  Passenger {
 id: number;
   fullName: string;
   checkedIn: boolean;
+  checkInDate?: number;
 
 }
 
@@ -63,7 +64,9 @@ export class AppComponent {
   passengers: Passenger[] = [{
   id: 1,
   fullName: 'Stephen',
-    checkedIn: true
+    checkedIn: true,
+
+    checkInDate: 1490742000000
   },
     {
       id: 2,
