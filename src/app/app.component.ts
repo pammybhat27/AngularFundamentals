@@ -40,6 +40,10 @@ id: number;
 
           {{ i }} : {{passenger.fullName}}
           <p>{{passenger | json}}</p>
+          <div class = "date">
+          Check in Date:
+            {{passenger.checkInDate? (passenger.checkInDate | date : 'yMMMMd') :'Not checked in'}}
+          </div>
         </li>
 
       </ul>
