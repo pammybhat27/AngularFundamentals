@@ -25,6 +25,31 @@ id: number;
 
       </ul>
 
+      <h3> Airline Passengers</h3>
+      <ul>
+        <li *ngFor="let passenger of passengers; let i = index">
+          <span class = "status"
+                [ngClass]= "{
+            'checked-in': passenger.checkedIn,
+            'checked-out':!passenger.checkedIn}">
+
+          </span>
+
+          {{ i }} : {{passenger.fullName}}
+        </li>
+
+      </ul>
+
+
+
+
+
+
+
+
+
+
+
     </div>
     `,
     styleUrls: ['app.component.scss']
