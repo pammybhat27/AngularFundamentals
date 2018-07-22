@@ -39,6 +39,7 @@ id: number;
           </span>
 
           {{ i }} : {{passenger.fullName}}
+          <p>{{passenger | json}}</p>
         </li>
 
       </ul>
@@ -65,7 +66,6 @@ export class AppComponent {
   id: 1,
   fullName: 'Stephen',
     checkedIn: true,
-
     checkInDate: 1490742000000
   },
     {
