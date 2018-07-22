@@ -15,6 +15,7 @@ id: number;
       <h3> Airline Passengers</h3>
       <ul>
         <li *ngFor="let passenger of passengers; let i = index">
+          <span class = "status"></span>
          {{ i }} : {{passenger.fullName}}
         </li>
       </ul>
