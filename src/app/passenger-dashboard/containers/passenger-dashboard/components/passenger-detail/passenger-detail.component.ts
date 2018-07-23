@@ -44,8 +44,8 @@ import {Passenger} from '../../../../model/passenger.interface';
 
       Remove  </button>
 
-    
-    
+
+
   </div>
   `
 
@@ -59,16 +59,21 @@ export class PassengerDetailComponent {
 
   editing = false;
 
-  @Output()
-  remove: EventEmitter<any> = new EventEmitter();
+   @Output()
+   remove: EventEmitter<any> = new EventEmitter();
 
-
+   @Output()
+   edit: EventEmitter<any> = new EventEmitter();
 
   onChangeName(value: string) {
     this.detail.fullName = value;
 
   }
   toggleEdit() {
+    if (this.editing) {
+      this.edit.emit(this.detail);
+    }
+
     this.editing = !this.editing;
 
   }
