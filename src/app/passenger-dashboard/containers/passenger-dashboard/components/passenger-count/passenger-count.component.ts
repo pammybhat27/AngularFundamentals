@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {Passenger} from '../../../../model/passenger.interface';
 
 
@@ -6,8 +6,14 @@ import {Passenger} from '../../../../model/passenger.interface';
   selector: 'passenger-count',
   template: `
   <div>
-    Count Component
+  Airline Customers
+
   </div>
+  <div>
+   Total Passengers: {{checkedInCount()}}/{{items.length}}
+  </div>
+
+
   `
 
 })
@@ -15,6 +21,16 @@ import {Passenger} from '../../../../model/passenger.interface';
 
 
 export class PassengerCountComponent {
-items: Passenger[];
+  @Input()
+  items: Passenger[];
 
+  checkedInCount(): number {
+   if (!this.items) { return; }
+     return this.items.filter((passenger: Passenger) => passenger.checkedIn).length;
+
+
+
+
+
+  }
 }
