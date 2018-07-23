@@ -5,13 +5,18 @@ import {PassengerDashboardComponent} from './containers/passenger-dashboard/pass
 
 @NgModule({
   declarations: [
-
+    PassengerDashboardComponent
   ],
   imports: [
     CommonModule
-  ]
+
+  ],
+  exports: [PassengerDashboardComponent]
+
+
 
 })
+
 export class PassengerDashboardModule {
 
 

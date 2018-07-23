@@ -19,6 +19,7 @@ id: number;
     selector: 'app-root',
     template: `
     <div class = 'app'>
+      <passenger-dashboard></passenger-dashboard>
       <h3> Airline Passengers</h3>
 
 
