@@ -57,8 +57,9 @@ export class PassengerDashboardComponent implements OnInit {
     ];
 
   }
-  handleRemove(event) {
-    console.log(event);
+  handleRemove(event: Passenger) {
+    this.passengers = this.passengers.filter((passenger: Passenger) => passenger.id !== event.id);
+
   }
 
   handleEdit(event) {
