@@ -13,6 +13,8 @@ template: `
     <passenger-detail
     *ngFor ="let passenger of passengers;"
     [detail] = "passenger"
+    (remove)="handleRemove($event)"
+    (edit) = "handleEdit($event)"
     ></passenger-detail>
     <h3> Airline Passengers</h3>
 
@@ -55,8 +57,14 @@ export class PassengerDashboardComponent implements OnInit {
     ];
 
   }
+  handleRemove(event) {
+    console.log(event);
+  }
 
+  handleEdit(event) {
+    console.log(event);
 
+  }
 
 
 }
