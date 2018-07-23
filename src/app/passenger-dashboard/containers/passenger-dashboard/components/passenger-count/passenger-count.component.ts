@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {Passenger} from '../../../../model/passenger.interface';
 
 
 @Component({
@@ -14,6 +15,6 @@ import { Component } from '@angular/core';
 
 
 export class PassengerCountComponent {
-
+items: Passenger[];
 
 }
