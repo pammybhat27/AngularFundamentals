@@ -4,6 +4,7 @@ import {Passenger} from '../../../../model/passenger.interface';
 
 @Component({
   selector: 'passenger-detail',
+  styleUrls:['passenger-detail.component.scss'],
   template: `
   <div>
     Detail Component
