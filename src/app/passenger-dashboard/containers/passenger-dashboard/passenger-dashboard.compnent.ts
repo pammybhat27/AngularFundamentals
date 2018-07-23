@@ -25,59 +25,55 @@ template: `
           <span class = "status"
                 [ngStyle] ="{ backgroundColor: (passenger.checkedIn?'#2ecc71':'#c0392b')}"
 >
-
           </span>
-
         {{ i }} : {{passenger.fullName}}
-
         <div class = "date">
           Check in Date:
           {{passenger.checkInDate? (passenger.checkInDate | date | uppercase : 'yMMMMd') :'Not checked in'}}
         </div>
-
         <div class = "children">
           children: {{passenger.children?.length || 0}}
         </div>
       </li>
-
     </ul>
-
-
-  </div>
+ </div>
 
 `
-
-
-
-
-
 })
 
 
-export class PassengerDashboardComponent {
+export class PassengerDashboardComponent implements OnInit {
 
-  passengers: Passenger[] = [{
-    id: 1,
-    fullName: 'Stephen',
-    checkedIn: true,
-    checkInDate: 1490742000000,
-    children: [{name: 'Ted', age: 12}]
-  },
-    {
-      id: 2,
-      fullName: 'Rose',
-      checkedIn: false,
-      children: null
+  passengers: Passenger[];
+  constructor() {
 
+  }
+  ngOnInit() {
+    this.passengers = [{
+      id: 1,
+      fullName: 'Stephen',
+      checkedIn: true,
+      checkInDate: 1490742000000,
+      children: [{name: 'Ted', age: 12}]
     },
-    {
-      id: 3,
-      fullName: 'Testing',
-      checkedIn: false,
-      children: null
+      {
+        id: 2,
+        fullName: 'Rose',
+        checkedIn: false,
+        children: null
 
-    }
-  ];
+      },
+      {
+        id: 3,
+        fullName: 'Testing',
+        checkedIn: false,
+        children: null
+
+      }
+    ];
+
+  }
+
 
 
 
