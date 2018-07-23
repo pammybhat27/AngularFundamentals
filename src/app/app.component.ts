@@ -8,18 +8,6 @@ import { Component } from '@angular/core';
     <div class = 'app'>
       <passenger-dashboard></passenger-dashboard>
       <h3> Airline Passengers</h3>
-
-
-
-
-
-
-
-
-
-
-
-
     </div>
     `,
     styleUrls: ['app.component.scss']
