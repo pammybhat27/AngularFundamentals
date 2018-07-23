@@ -1,4 +1,4 @@
-import {Component, OnInit } from '@angular/core';
+import {Component, OnInit, OnChanges } from '@angular/core';
 import {Passenger} from '../../model/passenger.interface';
 
 
@@ -16,6 +16,11 @@ template: `
     (remove)="handleRemove($event)"
     (edit) = "handleEdit($event)"
     ></passenger-detail>
+    <div
+      *ngFor ="let passenger of passengers;">
+      {{passenger.fullName }}
+    </div>
+
     <h3> Airline Passengers</h3>
 
  </div>
