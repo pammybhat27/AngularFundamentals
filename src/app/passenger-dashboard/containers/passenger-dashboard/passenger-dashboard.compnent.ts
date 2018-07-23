@@ -49,6 +49,7 @@ export class PassengerDashboardComponent implements OnInit {
 
   }
   ngOnInit() {
+    console.log(" Log Oninit");
     this.passengers = [{
       id: 1,
       fullName: 'Stephen',
