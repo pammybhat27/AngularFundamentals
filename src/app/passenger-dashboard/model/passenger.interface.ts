@@ -1,7 +1,6 @@
 export interface Child {
   name: string;
   age: number;
-
 }
 
 export interface Passenger {
