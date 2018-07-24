@@ -1,5 +1,6 @@
 import {Component, OnInit, OnChanges } from '@angular/core';
 import {Passenger} from '../../model/passenger.interface';
+import {PassengerDashboardService} from '../../passenger-dashboard.service';
 
 
 @Component({
@@ -32,13 +33,13 @@ template: `
 export class PassengerDashboardComponent implements OnInit {
 
   passengers: Passenger[];
-  constructor() {
+  constructor( private passengerService: PassengerDashboardService) {
 
   }
   ngOnInit() {
     // console.log(" Log Oninit");
 
-    this.passengers =
+    this.passengers = this.passengerService.getPassengers();
   }
   handleRemove(event: Passenger) {
     this.passengers = this.passengers.filter((passenger: Passenger) => passenger.id !== event.id);

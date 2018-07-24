@@ -8,8 +8,11 @@ import {PassengerDashboardComponent} from './containers/passenger-dashboard/pass
 import { PassengerDetailComponent} from './containers/passenger-dashboard/components/passenger-detail/passenger-detail.component';
 import { PassengerCountComponent  } from './containers/passenger-dashboard/components/passenger-count/passenger-count.component';
 
+// Service
 
-import { PassengerDashboardService} from './passenger-dashboard.service';
+
+import {HttpClient} from '@angular/common/http';
+import {PassengerDashboardService} from './passenger-dashboard.service';
 
 @NgModule({
   declarations: [
@@ -18,11 +21,14 @@ import { PassengerDashboardService} from './passenger-dashboard.service';
     PassengerCountComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    HttpClient
 
   ],
   exports: [PassengerDashboardComponent],
-  providers[PassengerDashboardService]
+  providers: [
+    PassengerDashboardService
+  ]
 
 
 
