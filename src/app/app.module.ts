@@ -14,7 +14,9 @@ import {PassengerDashboardModule} from './passenger-dashboard/passenger-dashboar
     BrowserModule,
     CommonModule,
     FormsModule,
-    PassengerDashboardModule
+    PassengerDashboardModule,
+
+
   ],
   declarations: [AppComponent]
 
