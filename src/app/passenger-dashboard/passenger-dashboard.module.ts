@@ -9,8 +9,6 @@ import { PassengerDetailComponent} from './containers/passenger-dashboard/compon
 import { PassengerCountComponent  } from './containers/passenger-dashboard/components/passenger-count/passenger-count.component';
 
 // Service
-
-
 import {HttpClient} from '@angular/common/http';
 import {PassengerDashboardService} from './passenger-dashboard.service';
 

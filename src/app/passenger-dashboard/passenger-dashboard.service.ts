@@ -2,7 +2,9 @@ import {Passenger} from './model/passenger.interface';
 import {HttpClient} from '@angular/common/http';
 
 export class PassengerDashboardService {
-  constructor(private httpClient: HttpClient) {}
+  constructor(private httpClient: HttpClient) {
+    console.log(httpClient);
+  }
 
   getPassengers(): Passenger[] {
       return [{
