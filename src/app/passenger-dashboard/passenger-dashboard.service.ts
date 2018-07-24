@@ -10,6 +10,10 @@ export class PassengerDashboardService {
     console.log(httpClient);
   }
 
+  // Observable<Book[]> {
+  // return this.http.get<Book[]>(this.bookUrl)
+
+
   getPassengers(): Passenger[] {
       return [{
         id: 1,
