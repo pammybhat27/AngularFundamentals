@@ -38,29 +38,7 @@ export class PassengerDashboardComponent implements OnInit {
   ngOnInit() {
     // console.log(" Log Oninit");
 
-    this.passengers = [{
-      id: 1,
-      fullName: 'Stephen',
-      checkedIn: true,
-      checkInDate: 1490742000000,
-      children: [{name: 'Ted', age: 12}]
-    },
-      {
-        id: 2,
-        fullName: 'Rose',
-        checkedIn: false,
-        children: null
-
-      },
-      {
-        id: 3,
-        fullName: 'Testing',
-        checkedIn: false,
-        children: null
-
-      }
-    ];
-
+    this.passengers =
   }
   handleRemove(event: Passenger) {
     this.passengers = this.passengers.filter((passenger: Passenger) => passenger.id !== event.id);

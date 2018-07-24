@@ -1,1 +1,35 @@
-import {}
+export class PassengerDashboardService {
+  constructor() {}
+
+  getPassengers() {
+      return [{
+        id: 1,
+        fullName: 'Stephen',
+        checkedIn: true,
+        checkInDate: 1490742000000,
+        children: [{name: 'Ted', age: 12}]
+      },
+        {
+          id: 2,
+          fullName: 'Rose',
+          checkedIn: false,
+          children: null
+
+        },
+        {
+          id: 3,
+          fullName: 'Testing',
+          checkedIn: false,
+          children: null
+
+        }
+      ];
+
+
+
+  }
+
+
+
+
+}
